@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVw-nX-uoF" customClass="CMMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zl1-er-36c">
+                                <rect key="frame" x="515" y="28" width="489" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rjC-hu-1pP">
+                                        <rect key="frame" x="5" y="5" width="479" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="yd9-Mf-pgV"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="489" id="H14-UP-E4F"/>
+                                    <constraint firstItem="rjC-hu-1pP" firstAttribute="top" secondItem="zl1-er-36c" secondAttribute="top" constant="5" id="T5i-wn-Ao1"/>
+                                    <constraint firstAttribute="height" constant="40" id="TX1-WL-Hsm"/>
+                                    <constraint firstAttribute="bottom" secondItem="rjC-hu-1pP" secondAttribute="bottom" constant="5" id="WwD-0G-W77"/>
+                                    <constraint firstItem="rjC-hu-1pP" firstAttribute="leading" secondItem="zl1-er-36c" secondAttribute="leading" constant="5" id="mh8-Xq-hzS"/>
+                                    <constraint firstAttribute="trailing" secondItem="rjC-hu-1pP" secondAttribute="trailing" constant="5" id="wGW-3q-bfJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="1024" translatesAutoresizingMaskIntoConstraints="NO" id="Kpo-zr-AT6">
+                                <rect key="frame" x="0.0" y="738" width="1024" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2fS-wE-jIe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wVw-nX-uoF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Pk-Xi-AgK"/>
+                            <constraint firstAttribute="trailing" secondItem="wVw-nX-uoF" secondAttribute="trailing" id="BEI-xL-eeK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wVw-nX-uoF" secondAttribute="bottom" id="Gw2-JH-Lm5"/>
+                            <constraint firstAttribute="trailing" secondItem="zl1-er-36c" secondAttribute="trailing" constant="20" symbolic="YES" id="J3V-1k-9tA"/>
+                            <constraint firstItem="zl1-er-36c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="j7z-xY-8n1"/>
+                            <constraint firstAttribute="trailing" secondItem="Kpo-zr-AT6" secondAttribute="trailing" id="jFt-Zj-CrB"/>
+                            <constraint firstItem="zl1-er-36c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" symbolic="YES" id="pg9-mL-CU7"/>
+                            <constraint firstItem="Kpo-zr-AT6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rej-iH-l8e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kpo-zr-AT6" secondAttribute="bottom" id="udw-7a-cQy"/>
+                            <constraint firstItem="wVw-nX-uoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wxx-bg-Zh9"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="mapView" destination="wVw-nX-uoF" id="j8Q-M9-VCe"/>
+                        <outlet property="placemarkLabel" destination="Kpo-zr-AT6" id="3be-aU-Sv2"/>
+                        <outlet property="searchPane" destination="zl1-er-36c" id="2kX-kA-evB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

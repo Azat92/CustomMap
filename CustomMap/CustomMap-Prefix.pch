@@ -1,0 +1,44 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    @import CoreLocation;
+    @import MapKit;
+
+/*! \struct RMProjectedPoint
+ \brief coordinates, in projected meters, paralleling CGPoint */
+typedef struct {
+	double x, y;
+} CMProjectedPoint;
+
+/*! \struct RMProjectedSize
+ \brief width/height struct, in projected meters, paralleling CGSize */
+typedef struct {
+	double width, height;
+} CMProjectedSize;
+
+/*! \struct RMProjectedRect
+ \brief location and size, in projected meters, paralleling CGRect */
+typedef struct {
+	CMProjectedPoint origin;
+	CMProjectedSize size;
+} CMProjectedRect;
+
+#ifdef DEBUG
+#define MYLog(...) NSLog(__VA_ARGS__)
+#else
+#define MYLog(...)
+#endif
+
+#endif
